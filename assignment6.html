@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> Assignment 6</title>
+        <Script>
+            function Calculator(){
+                //INPUT: two numbers;
+                // PROCESSING: calculat using operations;
+                //OUTPUT: operation result;
+
+                
+                let number1=parseInt(document.getElementById("a").value);
+                let number2=parseInt(document.getElementById("b").value);
+                let operation=document.getElementById("c").value;
+
+                let Result;
+
+                if(operation=="+"){
+                    Result=number1+number2;
+                }
+                else if(operation=="*"){
+                    Result=number1*number2;
+                }
+                else  if(operation=="-"){
+                    Result=number1-number2;
+                }
+                else if(operation=="/"){
+                    Result=number1/number2;
+                }
+                else Result= "undefined";
+                
+
+                    document.getElementById("out").innerHTML=Result;
+                
+            }
+        </Script>
+
+    </head>
+    <body>
+        <h3>Test your maths skills</h3>
+
+         <input type="text" id="a">
+         <input type="text" id="c">
+         <input type="text" id="b">
+    
+        <br><br>
+        <button type="button" onclick="Calculator()">Calculator</button>
+        <div id="out"></div>
+    </body>
+</html>

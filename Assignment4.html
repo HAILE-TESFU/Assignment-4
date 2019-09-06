@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> Assignment 2</title>
+        <Script>
+            function DownPayment(){
+                //INPUT: Cost of a house;
+                // PROCESSING: if else conditions;
+                //OUTPUT: Student year;
+                 let studentYear;
+
+                let HouseCost=parseFloat(document.getElementById("a").value);
+
+                let DownPayment;
+
+                if(HouseCost>=0 && HouseCost<49999.99){
+                    DownPayment=0.05*HouseCost;
+                }
+                if(HouseCost>=50000 && HouseCost<99999.99){
+                    DownPayment=2000+0.1*(HouseCost-50000);
+                }
+                if(HouseCost>=100000 && HouseCost<199999.99){
+                    DownPayment=7500+0.2*(HouseCost-100000);
+                }
+                if(HouseCost>=200000 ){
+                    DownPayment=27500+0.25*(HouseCost-50000);
+                }
+
+                    document.getElementById("out").innerHTML=DownPayment;
+                
+            }
+        </Script>
+
+    </head>
+    <body>
+        <h3>THE Wear</h3>
+        House cost: <input type="text" id="a">
+    
+        <br><br>
+        <button type="button" onclick="DownPayment()">Student Year</button>
+        <div id="out"></div>
+    </body>
+</html>

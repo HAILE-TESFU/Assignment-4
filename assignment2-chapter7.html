@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> Assignment 2</title>
+        <Script>
+            function IcreaseSales(){
+                //INPUT: two numbers;
+                // PROCESSING: conditional statements;
+                //OUTPUT: increase sales;
+
+                
+                let CustomersSubTotal=parseInt(document.getElementById("a").value);
+                let DayOfWeek=new Date().getDay();
+
+                let TotalAmountDue;
+
+                let IcreasedSales;
+
+                if(CustomersSubTotal>50){
+                    if(DayOfWeek=="Wednesday"||DayOfWeek=="Tuesday"){
+                        IcreasedSales=(CustomersSubTotal-0.1*CustomersSubTotal);
+                        TotalAmountDue=parseInt(IcreasedSales+0.06*CustomersSubTotal);
+                    }
+                }
+                 else TotalAmountDue=" un known";
+                
+
+                    document.getElementById("out").innerHTML=TotalAmountDue;
+                
+            }
+        </Script>
+
+    </head>
+    <body>
+        <h3>Test your maths skills</h3>
+
+       Customer Subtotal:  <input type="text" id="a">
+    
+        <br><br>
+        <button type="button" onclick="IcreaseSales()">Total Amount Due</button>
+        <div id="out"></div>
+    </body>
+</html>

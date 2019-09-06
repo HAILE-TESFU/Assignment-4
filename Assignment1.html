@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> example 6</title>
+        <Script>
+            function AbsoluteDifference(){
+                //INPUT: the coeffients a and b, and the constant c;
+                // PROCESSING: (-b+Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a) and
+                // (-b-Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a)
+                //OUTPUT: the roots;
+
+                let number1=parseInt(document.getElementById("a").value);
+                let number2=parseInt(document.getElementById("b").value);
+                
+                let AbsoluteDifference=parseInt(Math.abs(number1-number2));
+
+                    document.getElementById("out").innerHTML=AbsoluteDifference;
+                
+            }
+        </Script>
+
+    </head>
+    <body>
+        <h3>THE ROOTS</h3>
+        number1: <input type="text" id="a">
+        number2: <input type="text" id="b">
+    
+        <br><br>
+        <button type="button" onclick="AbsoluteDifference()">Absolute Difference</button>
+        <div id="out"></div>
+    </body>
+</html>

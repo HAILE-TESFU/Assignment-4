@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> Assignment 2</title>
+        <Script>
+            function FootWear(){
+                //INPUT: weather;
+                // PROCESSING: if else conditions;
+                //OUTPUT: foot wear;
+
+                let weather=String(document.getElementById("a").value);
+                  
+                let Result;
+                if(weather=="hot"){
+                    Result=" Sandals";
+                }
+                else if(weather=="rain"){
+                     Result=" Galoshes";
+                }
+                if(weather=="snow"){
+                     Result=" boots";
+                }
+                else Result="Shoe";
+
+                    document.getElementById("out").innerHTML=Result;
+                
+            }
+        </Script>
+
+    </head>
+    <body>
+        <h3>THE Wear</h3>
+        weather: <input type="text" id="a">
+    
+        <br><br>
+        <button type="button" onclick="FootWear()">preferable Shoe</button>
+        <div id="out"></div>
+    </body>
+</html>

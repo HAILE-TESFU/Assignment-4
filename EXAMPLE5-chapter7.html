@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> Assignment 2</title>
+        <Script>
+            function ChildsBedTime(){
+                //INPUT: childs age and season of the year;
+                // PROCESSING: conditional statements;
+                //OUTPUT: Childs bet time;
+
+                
+                let ChildAge=parseInt(document.getElementById("a").value);
+                let Season=document.getElementById("b").value;
+
+                let ChildsBedTime;
+
+                if(ChildAge<=5){
+                    if(Season=="Summer"||Season=="fall"){
+                        ChildsBedTime=" Childs bet time is 8:30 PM";
+                    }
+                    }
+                else if(ChildAge<=5){
+                    if(Season=="winter"||Season=="spring"){
+                        ChildsBedTime=" Childs bet time is 8:30 PM";
+                    }
+                    }
+                
+                 else if(ChildAge>=6 && ChildAge<12){
+                    if(Season=="winter"||Season=="spring"){
+                        ChildsBedTime=" Childs bet time is 8:00 PM";
+                    }
+                    }
+                else if(ChildAge>=6 && ChildAge<12){
+                    if(Season=="Summer"||Season=='fall'){
+                        ChildsBedTime=" Childs bet time is 9:30 PM";
+                    }
+                    }
+            
+                else if(ChildAge>=13){
+                    if(Season=="Summer"||Season=="winter"){
+                        ChildsBedTime=" Childs bet time is 10:30 PM";
+                    }
+                    }
+            
+                else if(ChildAge>=13){
+                    if(Season=="fall"||Season=="spring"){
+                        ChildsBedTime=" Childs bet time is 9:30 PM";
+                    }
+                    }
+                
+                
+                    document.getElementById("out").innerHTML=ChildsBedTime;
+            }
+        </Script>
+
+    </head>
+    <body>
+        <h3>Childs ber time</h3>
+
+       Age:  <input type="text" id="a">
+       Season:<input type="text" id="b">
+    
+        <br><br>
+        <button type="button" onclick="ChildsBedTime()">Total Amount Due</button>
+        <div id="out"></div>
+    </body>
+</html>

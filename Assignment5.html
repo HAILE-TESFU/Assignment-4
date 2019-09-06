@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> Assignment 5</title>
+        <Script>
+            function LengthOfBorrowingBook(){
+                //INPUT: Cost of a house;
+                // PROCESSING: if else conditions;
+                //OUTPUT: Student year;
+
+                let Name=document.getElementById("a").value;
+                let NumberOfBooksDue=parseInt(document.getElementById("b").value);
+
+                let LengthOfBorrowingBook;
+
+                if(Name=="Student"){
+                    if(NumberOfBooksDue==0){
+                        LengthOfBorrowingBook=6;
+                    }
+                    else if(NumberOfBooksDue>0 && NumberOfBooksDue<3 ){
+                        LengthOfBorrowingBook=4;
+                    }
+                    else if(NumberOfBooksDue>=3 ){
+                        LengthOfBorrowingBook=2;
+                    }
+                }
+                if(Name=="Faculty"){
+                    if(NumberOfBooksDue==0){
+                        LengthOfBorrowingBook=16;
+                    }
+                    else if(NumberOfBooksDue>0 && NumberOfBooksDue<3 ){
+                        LengthOfBorrowingBook=12;
+                    }
+                    else if(NumberOfBooksDue>=3 ){
+                        LengthOfBorrowingBook=8;
+                    }
+                }
+                if(Name=="other"){
+                    if(NumberOfBooksDue==0){
+                        LengthOfBorrowingBook=4;
+                    }
+                    else if(NumberOfBooksDue>0 && NumberOfBooksDue<3){
+                        LengthOfBorrowingBook=4;
+                    }
+                    else if(NumberOfBooksDue>=3 ){
+                        LengthOfBorrowingBook=2;
+                    }
+                }
+                
+
+                    document.getElementById("out").innerHTML=LengthOfBorrowingBook;
+                
+            }
+        </Script>
+
+    </head>
+    <body>
+        <h3>Length Of Borrowing Book</h3>
+        name : <input type="text" id="a">
+        number books due: <input type="text" id="b">
+    
+        <br><br>
+        <button type="button" onclick="LengthOfBorrowingBook()">Length Of Borrowing Book</button>
+        <div id="out"></div>
+    </body>
+</html>

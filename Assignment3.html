@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> Assignment 2</title>
+        <Script>
+            function StudentYear(){
+                //INPUT: Student name and completed credits;
+                // PROCESSING: if else conditions;
+                //OUTPUT: Student year;
+                 let studentYear;
+
+                let StudentName=String(document.getElementById("a").value);
+                let CompletedCredits=String(document.getElementById("b").value);
+
+                            
+                if(CompletedCredits>=0 && StudentYear<30){
+                     studentYear=StudentName+"---"+"Freshman";
+                }
+                if(CompletedCredits>=60 && StudentYear<90){
+                     studentYear=StudentName+"---"+"Sophomer";
+                }
+                if(CompletedCredits>=0 && StudentYear<30){
+                     studentYear=StudentName+"---"+"Junior";
+                }
+                if(CompletedCredits>=90 ){
+                     studentYear=StudentName+"---"+"Seniour";
+                }
+
+                    document.getElementById("out").innerHTML=studentYear;
+                
+            }
+        </Script>
+
+    </head>
+    <body>
+        <h3>THE Wear</h3>
+        Student name: <input type="text" id="a">
+        Student year: <input type="text" id="b">
+    
+        <br><br>
+        <button type="button" onclick="StudentYear()">Student Year</button>
+        <div id="out"></div>
+    </body>
+</html>

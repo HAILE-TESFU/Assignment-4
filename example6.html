@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title> example 6</title>
+        <Script>
+            function PersonsCommision(){
+                //INPUT: the coeffients a and b, and the constant c;
+                // PROCESSING: (-b+Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a) and
+                // (-b-Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a)
+                //OUTPUT: the roots;
+
+                let TotalWeeklySales=parseFloat(document.getElementById("a").value);
+                
+                let PersonsCommision;
+
+                if(TotalWeeklySales>=0 && TotalWeeklySales<300){
+                    PersonsCommision="The persons commision:=" + parseFloat(0*TotalWeeklySales);
+                }
+                else if(TotalWeeklySales>=300 && TotalWeeklySales<600){
+                    PersonsCommision="The persons commision:=" + parseFloat(0.2*TotalWeeklySales); 
+                }
+                else if(TotalWeeklySales>=600 && TotalWeeklySales<1000){
+                    PersonsCommision="The persons commision:=" + parseFloat(0.25*TotalWeeklySales);
+                }
+                else if(TotalWeeklySales>=1000 ){
+                    PersonsCommision="The persons commision:=" + parseFloat(0.3*TotalWeeklySales);
+                }
+
+                    document.getElementById("out").innerHTML=PersonsCommision;
+                
+            }
+        </Script>
+
+    </head>
+    <body>
+        <h3>THE commision</h3>
+        Total weekly sales: <input type="text" id="a">
+    
+        <br><br>
+        <button type="button" onclick="PersonsCommision()">Persons Commision</button>
+        <div id="out"></div>
+    </body>
+</html>
